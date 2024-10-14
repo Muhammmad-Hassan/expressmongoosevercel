@@ -2,11 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 const app = express();
+require("dotenv").config()
 
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://hassan:hassan123@cluster0.1uazb.mongodb.net/smitcrud?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(process.env.DB_URI)
     .then(() => {
         console.log("Connection successful!");
     })
