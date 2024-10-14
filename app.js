@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://hassan:hassan123@cluster0.1uazb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://hassan:hassan123@cluster0.1uazb.mongodb.net/smitcrud?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => {
         console.log("Connection successful!");
     })
